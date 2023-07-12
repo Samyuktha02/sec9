@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --primary: #06A3DA;
+    --secondary: #34AD54;
+    --light: #EEF9FF;
+    --dark: #091E3E;
+}
+
+.align {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 3rem;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.3rem;
+}
+
+.master {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header-1 {
+    height: 45px;
+    width: 100%;
+    background-color: var(--dark);
+}
+
+.header-1 h1 {
+    color: white;
+    position: absolute;
+    left: 2%;
+    top: 12px;
+    font-size: 15px;
+}
+
+.header-1 h2 {
+    color: white;
+    position: absolute;
+    left: 19%;
+    top: 12px;
+    font-size: 15px;
+}
+
+.header-1 h3 {
+    color: white;
+    position: absolute;
+    left: 30%;
+    top: 12px;
+    font-size: 15px;
+}
+
+.header-1 .fas1 {
+    color: white;
+    font-size: 14px;
+    position: relative;
+    left: 83%;
+    top: 7px;
+    padding: 6px 8px;
+    margin: 2px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+.logo {
+    font-size: 35px;
+    color: var(--primary);
+    margin-left: 3%;
+}
+
+.logo h3 {
+    font-weight: 800;
+}
+
+.navbar {
+   
+    background-color: #fff;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li .active {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    border-bottom-width: 3px;
+}
+
+.navbar ul li {
+    padding: 10px 15px;
+    position: relative;
+}
+.navbar ul li a:hover{
+    color: #06A3DA;
+}
+
+.navbar ul li a {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    transition: all 0.3s;
+
+}
+
+/* .navbar ul li a:hover {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    border-bottom-width: 3px;
+} */
+
+.navbar ul li a .fas {
+    color: #06A3DA;
+    font-weight: 700;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.btn {
+    font-size: 16.6px;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 2px 20px;
+    border-radius: 2px;
+    margin-right: 39px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #4BB3E2;
+    color: #091E3E;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: 15px;
+    background-color: #fff;
+    margin-left: -15px;
+}
+
+.navbar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 1px
+}
+
+.navbar ul li:hover .dropdown-menu ul li {
+    width: 145px;
+    padding: 10px;
+}
+
+.navbar ul li:hover .dropdown-menu ul li a {
+    font-size: 16px;
+}
+
+.dropdown-menu-1 {
+    display: none;
+}
+.navbar ul .dropdown-menu li:hover{
+    background-color:rgb(217, 217, 217);
+}
+.navbar ul .dropdown-menu-1 li:hover{
+    background-color:rgb(217, 217, 217);
+}
+
+.navbar ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: 15px;
+    background-color: #fff;
+    margin-left: -15px;
+}
+
+.navbar ul li:hover .dropdown-menu-1 ul {
+    display: block;
+    margin: 1px
+}
+
+.navbar ul li:hover .dropdown-menu-1 ul li {
+    width: 145px;
+    padding: 10px;
+}
+
+.navbar ul li:hover .dropdown-menu-1 ul li a {
+    font-size: 16px;
+}
+
+.checkbtn {
+    color: var(--primary);
+    font-size: 24px;
+    margin-right: 49px;
+    padding: 4px 7px 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    border: 1px solid #06A3DA;
+}
+
+#check {
+    display: none;
+}
+
+.homecontainer {
+    bottom: 68px;
+    height: 45rem;
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    transition: 2s linear;
+}
+
+.slide {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slidedata {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+    padding: 0 20%;
+}
+
+.slidedata h5 {
+    color: #ffffff;
+    font-size: 25px;
+    font-family: var(--font-family1);
+    opacity: 1;
+}
+
+.slidedata h1 {
+    color: #ffffff;
+    font-family: var(--font-family2);
+    font-size: 74px;
+    font-weight: 800;
+    opacity: 0.9;
+}
+
+.slidedata .b2 {
+    position: relative;
+    padding: 17px 35px;
+    top: 25px;
+    right: 20px;
+    font-size: 17px;
+    color: #000;
+    background-color: #06a3da;
+    font-weight: bolder;
+    border: none;
+    transition: 0.3s;
+}
+
+.slidedata .b2:hover {
+    background-color: #4BB3E2;
+    color: #000000;
+}
+
+.slidedata .b3 {
+    position: relative;
+    padding: 13px 35px;
+    top: 25px;
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    font-weight: bolder;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.slidedata .b3:hover {
+    background: #fff;
+    color: #000;
+}
+
+.slide1 {
+    position: relative;
+    background-image: linear-gradient(#0d062b8a, #0d062b8a), url("carousel-1.jpg");
+}
+
+.slide2 {
+    background-image: linear-gradient(#0d062b8a, #0d062b8a), url("carousel-2.jpg");
+    opacity: 0.7;
+}
+
+.slider .arrows {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    color: #3a3333;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.slider .arrows:hover {
+    color: #fff;
+}
+
+.slider .arrows label {
+    display: none;
+}
+
+.slider .arrows-left {
+    left: 3%;
+}
+
+.slider .arrows-right {
+    right: 3%;
+}
+
+.slider input:nth-child(1):checked~.slides {
+    left: 0;
+}
+
+.slider input:nth-child(2):checked~.slides {
+    left: -100%;
+}
+
+.slider input:nth-child(1):checked~.arrows label:nth-child(1),
+.slider input:nth-child(2):checked~.arrows label:nth-child(2) {
+    display: block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+.boxcontainer {
+    position: relative;
+    margin-top: -70px;
+    left: 10%;
+    background: #06a3da;
+    width: 80%;
+    height: 145px;
+    z-index: 1;
+}
+
+.boxcount {
+    display: flex;
+}
+
+.content {
+    display: flex;
+}
+
+.box1 {
+    width: 33.33%;
+    height: 145px;
+    background-color: #19a4d8;
+}
+
+.box1 .content i {
+    position: absolute;
+    top: 45px;
+    left: 5%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+}
+
+.box1 .content h3 {
+    position: absolute;
+    left: 130px;
+    top: 42px;
+    color: #fff;
+}
+
+.box1 .content h1 {
+    position: absolute;
+    left: 130px;
+    top: 60px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 39px;
+}
+
+.box2 {
+    position: relative;
+    width: 33.33%;
+    height: 150px;
+    background-color: azure;
+}
+
+.box2 .content i {
+    position: absolute;
+    top: 45px;
+    left: 17%;
+    padding: 20px;
+    background-color: #19a4d8;
+    border-radius: 3px;
+}
+
+.box2 .content h3 {
+    position: absolute;
+    left: 130px;
+    top: 42px;
+    color: #06A3DA;
+}
+
+.box2 .content h1 {
+    position: absolute;
+    left: 130px;
+    top: 60px;
+    color: var(--dark);
+    font-weight: 800;
+    font-size: 39px;
+}
+
+.box3 {
+    position: relative;
+    width: 33.33%;
+    height: 145px;
+    background-color: #19a4d8;
+}
+
+.box3 .content i {
+    position: absolute;
+    top: 45px;
+    left: 17%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.box3 .content h3 {
+    position: absolute;
+    left: 130px;
+    top: 42px;
+    color: #fff;
+}
+
+.box3 .content h1 {
+    position: absolute;
+    left: 130px;
+    top: 60px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 39px;
+}
+.img-caro {
+    margin-top: 7%;
+    padding-bottom: 4%;
+}
+
+.img-caro img {
+    padding: 15px;
+}
